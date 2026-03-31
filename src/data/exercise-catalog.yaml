@@ -1,0 +1,833 @@
+- section: Warm-up / cardio
+  subsections:
+    - name: Standing
+      items:
+        - id: upper-body-twist
+          display_name: Upper body twist
+          image: upper_body_twist.gif
+        - id: crunch-standing
+          display_name: Crunch standing
+          image: crunch-standing.webp
+        - id: crunch-standing-alternating
+          display_name: Crunch standing alternating
+          image: crunch_standing_alternating.gif
+        - id: standing-toe-touch-kick
+          display_name: Standing toe touch kick
+          image: standing_toe_touch_kick.gif
+        - id: hip-cradle
+          display_name: Hip cradle
+          image: hip_cradle.gif
+        - id: hip-circles-standing
+          display_name: Hip circles - standing
+          image: hip_circles_standing.gif
+        - id: leg-swing
+          display_name: Leg swing
+          image: leg_swing.gif
+        - id: shoulder-roll
+          display_name: Shoulder roll
+          image: shoulder-roll.webp
+    - name: Run/jump
+      items:
+        - id: butt-kicks
+          display_name: Butt kicks
+          image: butt_kicks.gif
+        - id: high-knees
+          display_name: High knees
+          image: high_knees.gif
+        - id: long-jump-with-jog-back
+          display_name: Long jump with jog back
+          image: long_jump_with_jog_back.webp
+        - id: a-skip
+          display_name: A skip
+          image: a_skip.gif
+        - id: grapevine
+          display_name: Grapevine
+          image: grapevine.gif
+        - id: side-shuffle
+          display_name: Side shuffle
+          image: side_shuffle.gif
+        - id: skaters
+          display_name: Skaters
+          image: skaters.webp
+    - name: Jumping jacks
+      items:
+        - id: jumping-jack
+          display_name: Jumping jack
+          image: jumping_jack.gif
+        - id: jumping-jack-single-leg
+          display_name: Jumping jack single leg
+          image: jumping_jack_single_leg.gif
+        - id: jumping-jacks-cross
+          display_name: Jumping jacks - cross
+          image: jumping_jacks_cross.gif
+    - name: Burpees
+      items:
+        - id: burpee-jumpy
+          display_name: Burpee - jumpy
+          image: burpee_jumpy.gif
+        - id: burpee-low
+          display_name: Low burpee
+          image: burpee_low.gif
+        - id: burpee-no-jump-no-pushup
+          display_name: Burpee - no jump, no pushup
+          image: burpee_no_jump_no_pushup.gif
+        - id: burpee-single-leg
+          display_name: Burpee - single leg
+          image: burpee_single_leg.gif
+    - name: Mountain climbers
+      items:
+        - id: mountain-climbers
+          display_name: Mountain climbers
+          image: mountain_climbers.gif
+        - id: mountain-climber-twist
+          display_name: Mountain climber twist
+          image: mountain_climber_twist.webp
+        - id: mountain-climbers-wide
+          display_name: Mountain climbers wide
+          image: mountain_climbers_wide.webp
+    - name: Inchworms
+      items:
+        - id: inchworm
+          display_name: Inchworm
+          image: inchworm.gif
+        - id: walk-out-to-plank-taps
+          display_name: Walk out to plank taps
+          image: walk_out_to_plank_taps.gif
+        - id: push-ups-to-hops-single-leg
+          display_name: Push ups to hops single leg
+          image: push_ups_to_hops_single_leg.webp
+    - name: Warm-up equipped
+      items:
+        - id: jump-rope
+          display_name: Jump rope
+          image: jump_rope.gif
+        - id: elliptical-trainer
+          display_name: Elliptical trainer
+          image: elliptical_trainer.webp
+    - name: Wrists
+      items:
+        - id: wrists-warm-up
+          display_name: Wrists warm up
+          image: wrists_warm_up.jpg
+        - id: wrists-warm-up-kneeling
+          display_name: Wrists warm up - kneeling
+          image: wrists_warm_up_kneeling.gif
+
+- section: Mobility
+  subsections:
+    - name: Standing
+      items:
+        - id: getting-up-from-floor-crossed-legs
+          display_name: Getting up from floor - crossed legs
+          image: getting_up_from_floor_crossed_legs.webp
+        - id: superman-standing
+          display_name: Superman standing
+          image: superma_standing.webp
+        - id: wall-angels
+          display_name: Wall angels
+          image: wall_angels.webp
+        - id: calf-raises
+          display_name: Calf raises
+          image: galf_raises.webp
+    - name: Lunges
+      items:
+        - id: lunge-walking
+          display_name: Walking lunges
+          image: lunge_walking.gif
+        - id: lunge-forward
+          display_name: Forward lunge
+          image: lunge_forward.gif
+        - id: lunge-lateral
+          display_name: Lateral lunge
+          image: lunge_lateral.gif
+        - id: lunge-walking-spiderman
+          display_name: Walking spiderman lunge
+          image: lunge_walking_spiderman.gif
+    - name: Quadruped
+      items:
+        - id: cat-cow
+          display_name: Cat cow
+          image: cat_cow.webp
+
+- section: Core, posture, spine
+  subsections:
+    - name: Bear
+      items:
+        - id: bear-crawl
+          display_name: Bear crawl
+          image: bear_crawl.webp
+        - id: bear-crawl-side
+          display_name: Bear crawl side
+          image: bear_crawl_side.gif
+    - name: Planks, high
+      items:
+        - id: plank-high
+          display_name: Plank high
+          image: plank_high.webp
+        - id: plank-high-single-hand-forward
+          display_name: Plank high - single hand forward
+          image: plank_high_single_hand_forward.jpg
+        - id: plank-high-leg-up
+          display_name: Plank high - leg up
+          image: plank_high_leg_up.webp
+    - name: Planks, high, dynamic
+      items:
+        - id: plank-high-taps
+          display_name: Plank high taps
+          image: plank_high_taps.gif
+        - id: plank-high-crunch
+          display_name: Plank high crunch
+          image: plank_high_crunch.webp
+        - id: plank-high-jack
+          display_name: Plank high jack
+          image: plank_high_jack.webp
+        - id: plank-high-dynamic-row-dumbbell
+          display_name: Plank high dynamic row dumbbell
+          image: plank_high_dynamic_row_dumbbell.gif
+        - id: corkscrew
+          display_name: Corkscrew
+          image: corkscrew.webp
+    - name: Planks, low
+      items:
+        - id: plank-low
+          display_name: Plank low
+          image: plank_low.webp
+        - id: plank-low-leg-up
+          display_name: Plank low - leg up
+          image: plank_low_leg_up.jpg
+    - name: Side planks, low
+      items:
+        - id: plank-side-low
+          display_name: Plank side low
+          image: plank_side_low.webp
+        - id: plank-side-low-leg-up
+          display_name: Plank side low - leg up
+          image: plank_side_low_leg_up.webp
+    - name: Side planks, low, dynamic
+      items:
+        - id: plank-side-low-rotational
+          display_name: Plank side low - rotational
+          image: plank_side_low_rotational.gif
+        - id: plank-side-low-crunch
+          display_name: Plank side low crunch
+          image: plank_side_low_crunch.gif
+        - id: plank-side-dynamic-pulse-weight
+          display_name: Plank side dynamic pulse weight
+          image: plank_side_dynamic_pulse_weight.gif
+    - name: Side planks, high
+      items:
+        - id: plank-side-high
+          display_name: Plank side high
+          image: plank_side_high.webp
+        - id: plank-side-high-star
+          display_name: Side plank high - star
+          image: plank_side_high_star.jpg
+    - name: Side planks, high, dynamic
+      items:
+        - id: plank-side-high-star-dynamic
+          display_name: Plank side high - star dynamic
+          image: plank_side_high_star_dynamic.webp
+        - id: plank-side-crunch-upper
+          display_name: Plank side - crunch upper
+          image: plank_side_crunch_upper.webp
+        - id: plank-side-crunch-lower
+          display_name: Plank side - crunch lower
+          image: plank_side_crunch_lower.webp
+        - id: plank-side-fallen-triangle
+          display_name: Plank side - fallen triangle
+          image: plank_side_fallen_triangle.webp
+    - name: Planks, elevated
+      items:
+        - id: plank-high-elevated
+          display_name: Plank high - elevated
+          image: plank_high_elevated.jpeg
+        - id: plank-low-elevated-leg-up
+          display_name: Plank low - elevated leg up
+          image: plank_low_elevated_leg_up.webp
+    - name: Side planks, elevated
+      items:
+        - id: plank-side-elevated-hard
+          display_name: Plank side - elevated hard
+          image: plank_side_elevated_hard.jpg
+        - id: plank-side-low-elevated
+          display_name: Side plank low - elevated
+          image: plank_side_low_elevated.jpg
+    - name: Planks, reverse
+      items:
+        - id: plank-reverse
+          display_name: Reverse plank
+          image: plank_reverse.jpg
+        - id: plank-reverse-low
+          display_name: Low reverse plank
+          image: plank_reverse_low.png
+
+- section: Abs
+  subsections:
+    - name: Abs, supine
+      items:
+        - id: crunch-cycling
+          display_name: Cycling crunch
+          image: crunch_cycling.gif
+        - id: jack-knife
+          display_name: Jack knife
+          image: jack_knife.webp
+        - id: hollow-body
+          display_name: Hollow body
+          image: hollow_body.gif
+        - id: starfish-alternating-easy
+          display_name: Starfish alternating - easy
+          image: starfish_alternating_easy.gif
+        - id: starfish-to-crunch
+          display_name: Starfish to Crunch
+          image: starfish_to_crunch.gif
+        - id: crunch
+          display_name: Crunch
+          image: crunch.gif
+        - id: crunch-curl
+          display_name: Crunch curl
+          image: crunch_curl.gif
+        - id: crunch-hold
+          display_name: Crunch hold
+          image: crunch_hold.png
+        - id: crunch-legs-up
+          display_name: Crunch - legs up
+          image: crunch_legs_up.gif
+        - id: crunch-oblique
+          display_name: Crunch oblique
+          image: crunch_oblique.gif
+        - id: crunch-reach-out-tuck-in
+          display_name: Crunch reach out tuck in
+          image: crunch_reach_out_tuck_in.gif
+        - id: crunch-star
+          display_name: Star crunch
+          image: crunch_star.webp
+        - id: crunch-toe-reach
+          display_name: Crunch toe reach
+          image: crunch_toe_reach.gif
+        - id: crunch-with-knee-lift
+          display_name: Crunch with knee lift
+          image: crunch_with_knee_lift.gif
+        - id: crunch-with-legs-lift
+          display_name: Crunch with legs lift
+          image: crunch_with_legs_lift.gif
+        - id: starfish-to-jack-knife
+          display_name: Starfish to jack knife
+          image: star_fish_to_jack_knife.gif
+        - id: dead-bug
+          display_name: Dead bug
+          image: dead_bug.gif
+    - name: Abs, seated
+      items:
+        - id: crunch-sitting
+          display_name: Crunch sitting
+          image: crunch_sitting.gif
+        - id: crunch-sitting-oblique
+          display_name: Crunch sitting oblique
+          image: crunch_sitting_oblique.gif
+        - id: russian-twist
+          display_name: Russian twist
+          image: russian_twist.gif
+
+- section: Dumbbell
+  subsections:
+    - name: Standing
+      items:
+        - id: dumbbell-shoulder-press
+          display_name: Dumbbell shoulder press
+          image: dumbbell_shoulder_press.gif
+        - id: dumbbell-fly
+          display_name: Dumbbell fly
+          image: dumbbell_fly.webp
+        - id: dumbbell-standing-chest-fly-raise
+          display_name: Dumbbell standing chest fly raise
+          image: dumbbel_standing_chest_fly_raise.gif
+        - id: dumbbell-frontal-rises-standing-one-leg
+          display_name: Dumbbell frontal rises - standing one leg
+          image: dumbbell_frontal_rises_standing_one_leg.gif
+        - id: dumbbell-front-rise
+          display_name: Dumbbell front rise
+          image: dumbbell_front_rise.gif
+        - id: dumbbell-lateral-rises
+          display_name: Dumbbell lateral rises
+          image: dumbbell_lateral_rises.gif
+        - id: dumbbell-front-to-lateral-raise
+          display_name: Dumbbell front to lateral raise
+          image: dumbbell_front_to_lateral_raise.gif
+        - id: dumbbell-upright-row
+          display_name: Dumbbell upright row
+          image: dumbbell_upright_row.gif
+        - id: dumbbell-row-single-arm
+          display_name: Dumbbell row - single arm
+          image: dumbbell_row_single_arm.webp
+        - id: dumbbell-row
+          display_name: Dumbbell row
+          image: dumbbell_row.gif
+        - id: dumbbell-row-bench-single
+          display_name: Dumbbell row bench - single arm
+          image: dumbbell_row_bench_single.gif
+        - id: dumbbell-row-bench-symmetric
+          display_name: Dumbbell row bench - symmetric
+          image: dumbbel_row_bench_symmetric.webp
+        - id: dumbbell-overhead-press
+          display_name: Dumbbell overhead press
+          image: dumbbell_overherad_press.gif
+        - id: dumbbell-shoulder-external-rotation
+          display_name: Dumbbell shoulder external rotation
+          image: dumbbell_shoulder_external_rotation.gif
+        - id: dumbbell-bicep-curl
+          display_name: Dumbbell bicep curl
+          image: dumbbell_bicep_curl.webp
+        - id: dumbbell-hammer-curl-to-curl
+          display_name: Dumbbell hammer curl to curl
+          image: dumbbell_curl.webp
+        - id: dumbbell-hammer-curl
+          display_name: Dumbbell hammer curl
+          image: dumbbell_hammer_curl.gif
+    - name: Standing multi-joint
+      items:
+        - id: dumbbell-deadlift
+          display_name: Dumbbell deadlift
+          image: dumbbell_deadlift.gif
+        - id: dumbbell-thruster
+          display_name: Dumbbell thruster
+          image: dumbbell_thruster.webp
+    - name: Supine
+      items:
+        - id: dumbbell-bench-press
+          display_name: Dumbbell bench press
+          image: dumbbell_bench_press.gif
+        - id: dumbbell-chest-press-incline
+          display_name: Dumbbell chest press - incline
+          image: dumbbell_chest_press_incline.gif
+        - id: dumbbell-bench-fly
+          display_name: Dumbbell bench fly
+          image: dumbbel_bench_fly.gif
+        - id: dumbbell-chest-fly-supine
+          display_name: Dumbbell chest fly supine
+          image: dumbbell_chest_fly_supine.gif
+        - id: dumbbell-skull-crusher
+          display_name: Dumbbell skull crusher
+          image: dumbbell_skull_crusher.gif
+        - id: incline-svend-press
+          display_name: Incline svend press
+          image: incline_svend_press.jpg
+        - id: dumbbell-chest-fly-bench-incline
+          display_name: Dumbbell chest fly - bench incline
+          image: dumbbell_chest_fly_bench_incline.gif
+        - id: turkish-getup-half
+          display_name: Turkish getup - half
+          image: turkish_getup_half.webp
+    - name: Seated
+      items:
+        - id: dumbbell-shoulder-press-seated
+          display_name: Dumbbell shoulder press - seated
+          image: dumbbell_shoulder_press_seated.webp
+        - id: dumbbell-split-stance-overhead-press
+          display_name: Dumbbell split stance overhead press
+          image: dumbbell_split_stance_overhead_press.gif
+
+- section: Carries
+  items:
+    - id: farmers-walk
+      display_name: Farmers walk
+      image: farmers_walk.gif
+    - id: suitcase-carry
+      display_name: Suitcase carry
+      image: suitcase_carry.gif
+    - id: suitcase-carry-overhead
+      display_name: Suitcase carry overhead
+      image: suitcase_carry_overhead.gif
+
+- section: Pushups
+  items:
+    - id: push-up-regular
+      display_name: Push up regular
+      image: push_up_regular.gif
+    - id: push-up-wide
+      display_name: Push-up (wide)
+      image: push_up_wide.gif
+    - id: push-ups-diamond
+      display_name: Push-ups diamond
+      image: push_up_diamond.gif
+    - id: push-up-clap
+      display_name: Clap push up
+      image: pushup_clap.gif
+    - id: push-up-decline
+      display_name: Push up - decline
+      image: push_up_decline.gif
+    - id: pushup-row-dumbbell
+      display_name: Pushup row dumbbell
+      image: pushup_row_dumbbell.gif
+
+- section: Pull-ups & hanging
+  items:
+    - id: pull-up
+      display_name: Pull up
+      image: pull_up.gif
+    - id: pull-up-australian
+      display_name: Pull up - australian
+      image: pul_up_australian.gif
+    - id: chin-up
+      display_name: Chin up
+      image: chin_up.gif
+    - id: chin-up-australian-narrow
+      display_name: Chin up - australian narrow
+      image: chin_up_australian_narrow.gif
+    - id: hanging-knee-rises
+      display_name: Hanging knee rises
+      image: hanging_knee_rises.png
+    - id: hanging-leg-raise-straight
+      display_name: Hanging leg raise - straight
+      image: hanging_leg_raise_straight.gif
+
+- section: Band/resistance
+  items:
+    - id: band-face-pull
+      display_name: Band face pull
+      image: band_face_pull.gif
+    - id: band-pallof-press
+      display_name: Band pallof press
+      image: band_pallof_press.gif
+
+- section: Kettlebell
+  subsections:
+    - name: Multi-joint
+      items:
+        - id: kettlebell-romanian-deadlift
+          display_name: Kettlebell Romanian deadlift
+          image: kettlebell_romanian_deadlift.gif
+        - id: kettlebell-dead-lift-single-leg
+          display_name: Kettlebell dead lift - single leg
+          image: kettlebell_dead_lift_single_leg.webp
+        - id: kettlebell-windmill
+          display_name: Kettlebell windmill
+          image: kettlebell_windmill.gif
+        - id: kettlebell-clean
+          display_name: Kettlebell clean
+          image: kettlebell_clean.gif
+        - id: kettlebell-sumo-lift-high
+          display_name: Kettlebell sumo lift high
+          image: kettlebell_sumo_lift_high.gif
+        - id: kettlebell-goodmorning
+          display_name: Kettlebell good morning
+          image: kettlebell_goodmorning.gif
+    - name: Swings
+      items:
+        - id: kettlebell-snatch
+          display_name: Kettlebell snatch
+          image: kettlebell_snatch.gif
+        - id: kettlebell-swing
+          display_name: Kettlebell swing
+          image: kettlebell_swing.webp
+        - id: kettlebell-swing-hand-to-hand
+          display_name: Kettlebell swing hand to hand
+          image: kettlebell_swing_hand_to_hand.gif
+        - id: kettlebell-sit-to-press-up
+          display_name: Kettlebell sit to press up
+          image: kettlebell_sit_to_press_up.gif
+    - name: Kneeling
+      items:
+        - id: kettlebell-halo
+          display_name: Kettlebell halo
+          image: kettlebell_halo.gif
+
+- section: Squats
+  items:
+    - id: squat
+      display_name: Squat
+      image: squat.gif
+    - id: squat-jump
+      display_name: Jump squat
+      image: squat_jump.webp
+    - id: squat-to-stand
+      display_name: Squat to stand
+      image: squat_to_stand.gif
+    - id: squat-sumo-calf-raise
+      display_name: Squat sumo calf raise
+      image: squat_sumo_calf_raise.gif
+  subsections:
+    - name: Pistol
+      items:
+        - id: squat-pistol-half
+          display_name: Pistol squat half
+          image: squat_pistol_half.webp
+        - id: squat-pistol-deep
+          display_name: Pistol squat deep
+          image: squat_pistol_deep.webp
+        - id: squat-pistol-bound
+          display_name: Pistol squat bound
+          image: squat_pistol_bound.webp
+        - id: squat-pistol-sequence
+          display_name: Pistol squat sequence
+          image: squat_pistol_sequence.gif
+    - name: Bulgarian
+      items:
+        - id: squat-bulgarian
+          display_name: Bulgarian squat
+          image: squat_bulgarian.gif
+        - id: squat-bulgarian-split
+          display_name: Bulgarian split squat
+          image: squat_bulgarian_split.webp
+    - name: Weight
+      items:
+        - id: squat-dumbbell
+          display_name: Squat dumbbell
+          image: squat_dumbbell.gif
+        - id: dumbbell-suitcase-lift
+          display_name: Dumbbell suitcase lift
+          image: dumbbell_suitcase_lift.webp
+
+- section: Legs
+  items:
+    - id: step-up
+      display_name: Step up
+      image: step_up.gif
+
+- section: Hip band
+  subsections:
+    - name: Supine
+      items:
+        - id: hip-band-bridge-dip-abduction
+          display_name: Hip band bridge dip abduction
+          image: hip_band_bridge_dip_abduction.webp
+        - id: hip-band-glute-bridge-high-gravity
+          display_name: Hip band glute bridge - high gravity
+          image: hip_band_glute_bridge_high_gravity.gif
+        - id: hip-band-glute-bridge
+          display_name: Hip band glute bridge
+          image: hip_band_glute_bridge.gif
+        - id: hip-band-lateral-leg-raise
+          display_name: Hip band lateral leg raise
+          image: hip_band_lateral_leg_raise.gif
+    - name: Quad
+      items:
+        - id: hip-band-fire-hydrant
+          display_name: Hip band fire hydrant
+          image: hip_band_fire_hydrant.webp
+        - id: hip-band-kick-back
+          display_name: Hip band kick back
+          image: hip_band_kick_back.webp
+    - name: Standing
+      items:
+        - id: hip-band-shuffle
+          display_name: Hip band shuffle
+          image: hip_band_shuffle.webp
+        - id: hip-band-squat-shuffle-short
+          display_name: Hip band squat shuffle short
+          image: hip_band_squat_shuffle_short.gif
+        - id: hip-band-squat
+          display_name: Hip band squat
+          image: hip_band_squat.webp
+        - id: hip-band-squat-pulse
+          display_name: Hip band squat pulse
+          image: hip_band_squat_pulse.webp
+        - id: hip-band-squat-abduction
+          display_name: Hip band squat abduction
+          image: hip_band_squat_abduction.webp
+        - id: hip-band-standing-hip-abduction
+          display_name: Hip band standing hip abduction
+          image: hip_band_standing_hip_abduction.gif
+        - id: hip-band-standing-hip-abduction-pulse
+          display_name: Hip band standing hip abduction pulse
+          image: hip_band_standing_hip_abduction_pulse.gif
+        - id: glutes-kickback-standing
+          display_name: Glutes kickback - standing
+          image: glutes_kichback_standing.gif
+    - name: Other
+      items:
+        - id: hip-band-clamshell
+          display_name: Hip band clamshell
+          image: hip_band_clamshell.gif
+
+- section: Glutes
+  subsections:
+    - name: Glute bridge
+      items:
+        - id: glute-bridge-march
+          display_name: Glute bridge march
+          image: glute_bridge_march.gif
+        - id: glute-bridge-single-leg-straight
+          display_name: Glute bridge - single leg straight
+          image: glute_bridge_single_leg_straight.gif
+        - id: glute-bridge-single-leg
+          display_name: Glute bridge - single leg
+          image: glute_bridge_single_leg.gif
+        - id: glute-bridge-weight
+          display_name: Glute bridge with weight
+          image: glute_bridge_weight.gif
+        - id: glute-bridge-frog-pump
+          display_name: Glute bridge frog pump
+          image: glute_bridge_frog_pump.gif
+    - name: Glutes, elevated
+      items:
+        - id: glute-bridge-elevated-ball
+          display_name: Glute bridge - elevated ball
+          image: glute_bridge_elevated_ball.gif
+        - id: glute-bridge-elevated
+          display_name: Glute bridge - elevated
+          image: glute_bridge_elevated.gif
+        - id: glute-bridge-elevated-single-leg
+          display_name: Glute bridge - elevated single leg
+          image: glute_bridge_elevated_single_leg.webp
+    - name: Glutes, other
+      items:
+        - id: glute-lifts-prone-position
+          display_name: Glute lifts - prone position
+          image: glute_lifts_prone_position.gif
+        - id: clamshells
+          display_name: Clamshells
+          image: clamshells.gif
+        - id: clamshell-advanced
+          display_name: Clamshell - advanced
+          image: clamshell_advanced.gif
+
+- section: Stretches
+  subsections:
+    - name: Standing
+      items:
+        - id: deep-inhale-to-exhale
+          display_name: Deep inhale to exhale
+          image: deep_inhale_to_exhale.gif
+        - id: stretch-chest-wall
+          display_name: Chest wall stretch
+          image: stretch_chest_wall.avif
+        - id: biceps-dynamic-stretch
+          display_name: Biceps dynamic stretch
+          image: biceps_dynamic_stretch.webp
+        - id: stretch-arm-wall
+          display_name: Arm wall stretch
+          image: stretch_arm_wall.gif
+        - id: stretch-bicep-wall
+          display_name: Bicep wall stretch
+          image: stretch_bicep_wall.gif
+        - id: stretch-fold-forward-standing
+          display_name: Standing forward fold
+          image: stretch_fold_forward_standing.avif
+        - id: stretch-hamstring-standing
+          display_name: Standing hamstring stretch
+          image: stretch_hamstring_standing.avif
+        - id: stretch-shoulders-static-wall
+          display_name: Shoulder wall stretch
+          image: stretch_shoulders_static_wall.avif
+        - id: stretch-side-standing
+          display_name: Standing side stretch
+          image: stretch_side_standing.avif
+        - id: standing-dynamic-hamstrings-stretch
+          display_name: Standing dynamic hamstrings stretch
+          image: standing_dynamic_hamstrings_stretch.gif
+    - name: Lunges
+      items:
+        - id: down-dog-to-runners-lunge
+          display_name: Down dog to runners lunge
+          image: down_dog_to_runners_lunge.gif
+        - id: worlds-greatest-lunge
+          display_name: Worlds greatest lunge
+          image: worlds_greatest_lunge.webp
+        - id: worlds-greatest-stretch
+          display_name: Worlds greatest stretch
+          image: worlds_greatest_stretch.webp
+    - name: Kneeling
+      items:
+        - id: kneeling-side-bench-stretch
+          display_name: Kneeling side bench stretch
+          image: kneeling_side_bench_stretch.webp
+    - name: Quad
+      items:
+        - id: stretch-thoracic-rotations
+          display_name: Thoracic rotations
+          image: stretch_thoracic_rotations.webp
+    - name: Seated
+      items:
+        - id: hip-opener-dynamic
+          display_name: Hip opener dynamic
+          image: hip_opener_dynamic.gif
+        - id: hip-switches
+          display_name: Hip switches
+          image: hip_switches.gif
+        - id: stretch-90-90
+          display_name: Stretch 90-90
+          image: stretch_90_90.webp
+    - name: Supine
+      items:
+        - id: hip-and-lower-back-stretch
+          display_name: Hip and lower back stretch
+          image: hip_and_lower_back_stretch.webp
+        - id: knee-to-chest-laydown
+          display_name: Knee to chest - laydown
+          image: knee_to_chest_laydown.webp
+        - id: spinal-twist
+          display_name: Spinal twist
+          image: spinal_twist.webp
+        - id: stretch-figure-4
+          display_name: Figure 4 stretch
+          image: stretch_figure_4.avif
+        - id: double-hip-rotation
+          display_name: Double hip rotation
+          image: double_hip_rotation.webp
+        - id: knee-roll
+          display_name: Knee roll
+          image: knee_roll.webp
+
+- section: Yoga
+  items:
+    - id: trikonasana
+      display_name: Trikonasana
+      image: trikonasana.webp
+    - id: childs-pose
+      display_name: Child's pose
+      image: childs_pose.jpg
+    - id: three-legged-dog
+      display_name: Three legged dog
+      image: three_legged_dog.webp
+    - id: dog-upward
+      display_name: Upward dog (Urdhva Mukha Svanasana)
+      image: dog-upward.avif
+
+- section: Back
+  subsections:
+    - name: Superman quad
+      items:
+        - id: superman-quad-alternating
+          display_name: Superman quad alternating
+          image: superman_quad_alternating.webp
+        - id: superman-quad-hold
+          display_name: Superman quad hold
+          image: superman_quad_hold.webp
+        - id: superman-quad-knee-to-elbow
+          display_name: Superman quad knee to elbow
+          image: superman_quad_knee_to_elbow.gif
+    - name: Superman
+      items:
+        - id: superman
+          display_name: Superman
+          image: superman.webp
+        - id: superman-hold
+          display_name: Superman hold
+          image: superman_hold.jpg
+        - id: superman-alternating
+          display_name: Superman alternating
+          image: superman_alternating.webp
+        - id: superman-arms-raise
+          display_name: Superman arms raise
+          image: superman_arms_raise.gif
+        - id: superman-arms-raise-hold
+          display_name: Superman arms raise hold
+          image: superman_arms_raise_hold.jpg
+        - id: superman-variant-2
+          display_name: Superman variant 2
+          image: superman2.gif
+        - id: superman-variant-2-hold
+          display_name: Superman variant 2 hold
+          image: superman2_hold.jpg
+        - id: superman-variant-3
+          display_name: Superman variant 3
+          image: superman3.gif
+        - id: superman-variant-3-hold
+          display_name: Superman variant 3 hold
+          image: superman3_hold.jpg
+
+- section: Other
+  items:
+    - id: rest
+      display_name: Rest
+      image: rest.jpg

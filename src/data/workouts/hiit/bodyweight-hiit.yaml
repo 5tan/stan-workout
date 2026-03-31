@@ -1,0 +1,44 @@
+name: Bodyweight HIIT
+description: "Full-body high-intensity interval training. 40s work / 20s rest. 3 rounds, ~15 min. No equipment needed."
+
+plan:
+
+  # --- Round 1: Lower body power ---
+  - step: { exercise_id: squat-jump, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: butt-kicks, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: high-knees, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: push-ups-to-hops-single-leg, duration_s: 40 }
+
+  # --- Rest between rounds ---
+  - step: { exercise_id: rest, duration_s: 45 }
+
+  # --- Round 2: Full body explosive ---
+  - step: { exercise_id: burpee-jumpy, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: high-knees, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: long-jump-with-jog-back, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: jumping-jack, duration_s: 40 }
+
+  # --- Rest between rounds ---
+  - step: { exercise_id: rest, duration_s: 45 }
+
+  # --- Round 3: Core & upper body finisher ---
+  - step: { exercise_id: corkscrew, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: mountain-climber-twist, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: plank-high-jack, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+  - step: { exercise_id: crunch-cycling, duration_s: 40 }
+  - step: { exercise_id: rest, duration_s: 20 }
+
+  # --- Cooldown ---
+  - step: { exercise_id: stretch-hamstring-standing, label: L, duration_s: 30 }
+  - step: { exercise_id: stretch-hamstring-standing, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: stretch-fold-forward-standing, duration_s: 30 }
+  - step: { exercise_id: deep-inhale-to-exhale, duration_s: 30 }

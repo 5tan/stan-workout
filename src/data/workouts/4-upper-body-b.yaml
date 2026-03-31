@@ -1,0 +1,48 @@
+name: Thu - Upper Body B
+description: "Required: kettlebells, dumbbells, bench."
+
+plan:
+
+  # --- Warm-up ---
+  - include: warm-ups/warm-up-2.yaml
+
+  # ===== MAIN CIRCUIT (3 ROUNDS) =====
+
+  # --- Set 1 ---
+  - &set1
+    - step: { exercise_id: dumbbell-chest-press-incline, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 1.25", weight: 14.5kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+
+    - step: { exercise_id: dumbbell-row-bench-symmetric, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 1.25", weight: 14.5kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+
+    - step: { exercise_id: dumbbell-front-rise, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, weight: 6kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+
+    - step: { exercise_id: dumbbell-shoulder-press-seated, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+
+    - step: { exercise_id: incline-svend-press, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: disk, weight: 5kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+
+    - step: { exercise_id: dumbbell-hammer-curl, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+
+    - step: { exercise_id: dumbbell-skull-crusher, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
+
+  # --- Set 2 (repeat) ---
+  - step: { exercise_id: rest, duration_s: 90 }
+  - *set1
+
+  # --- Set 3 (repeat) ---
+  - step: { exercise_id: rest, duration_s: 90 }
+  - *set1
+
+  # --- Cooldown ---
+  - step: { exercise_id: rest, duration_s: 30 }
+  - step: { exercise_id: biceps-dynamic-stretch, duration_s: 25 }
+  - step: { exercise_id: stretch-arm-wall, label: "R", duration_s: 25  }
+  - step: { exercise_id: stretch-arm-wall, label: "L", image_flip: true, duration_s: 25  }
+  - step: { exercise_id: stretch-bicep-wall, label: "R", duration_s: 25  }
+  - step: { exercise_id: stretch-bicep-wall, label: "L", image_flip: true, duration_s: 25  }
+  - step: { exercise_id: stretch-shoulders-static-wall, duration_s: 25 }

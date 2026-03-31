@@ -1,0 +1,40 @@
+name: Warm-up 2
+description: Full-body warm-up. 
+plan:
+  # --- Phase 1: Joint mobilization ---
+  - step:
+      exercise_id: calf-raises
+      duration_s: 15
+  - step:
+      exercise_id: wrists-warm-up
+      duration_s: 15
+  - step:
+      label: Direction 1
+      exercise_id: shoulder-roll
+      duration_s: 15
+  - step:
+      label: Direction 2
+      exercise_id: shoulder-roll
+      duration_s: 15
+  - step:
+      exercise_id: standing-toe-touch-kick
+      duration_s: 30
+  # --- Phase 2: Dynamic stretches ---
+  - step:
+      exercise_id: inchworm
+      duration_s: 30
+  - step:
+      exercise_id: 	upper-body-twist
+      duration_s: 20
+  # --- Phase 3: Light cardio ---
+  - step:
+      exercise_id: skaters
+      duration_s: 30
+  - step:
+      exercise_id: burpee-jumpy
+      duration_s: 30
+
+  # --- Segway to workout ---
+  - step:
+      exercise_id: wrists-warm-up-kneeling
+      duration_s: 40

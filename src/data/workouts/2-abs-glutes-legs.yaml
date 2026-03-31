@@ -1,0 +1,47 @@
+name: Tue - Abs, glutes, legs
+description: "Required: dumbbells, kettlebells."
+
+plan:
+
+  # --- Warm-up ---
+  - include: warm-ups/warm-up-2.yaml
+
+  # ===== MAIN CIRCUIT (3 ROUNDS) =====
+
+  # --- Set 1 ---
+  - &set1
+    - step: { exercise_id: kettlebell-romanian-deadlift, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 5 }, label: 2xALL, weight: DB39kg}
+
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: russian-twist, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, weight: KB16kg}
+
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "R, b+5+5", weight: DB22kg }
+
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "L, b+5+5", weight: DB22kg, image_flip: true}
+
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: glute-bridge-weight, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 3 }, label: b+5+5, weight: DB22kg }
+
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: crunch-hold, durations_s: 60 }
+
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: starfish-to-jack-knife, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 6 } }
+
+  # --- Set 2 (repeat) ---
+  - step: { exercise_id: rest, duration_s: 90 }
+  - *set1
+
+  # --- Set 3 (repeat) ---
+  - step: { exercise_id: rest, duration_s: 90 }
+  - *set1
+
+  # --- Cooldown ---
+  - step: { exercise_id: knee-roll, duration_s: 20 }
+  - step: { exercise_id: spinal-twist, label: L, duration_s: 30 }
+  - step: { exercise_id: spinal-twist, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: L, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: deep-inhale-to-exhale, duration_s: 10 }

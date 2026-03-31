@@ -1,0 +1,20 @@
+name: Fri - Abs, hip-band
+description: "Required: hip band."
+
+plan:
+  - include: warm-ups/warm-up.yaml
+  - step: { exercise_id: rest, duration_s: 20 }
+
+  - include: circuits/pams-ab-workout.yaml
+  - step: { exercise_id: dog-upward, duration_s: 20 }
+  - step: { exercise_id: childs-pose, duration_s: 20 }
+
+  - include: circuits/hip-band.yaml
+  
+  # --- Cooldown ---
+  - step: { exercise_id: knee-roll, duration_s: 20 }
+  - step: { exercise_id: spinal-twist, label: L, duration_s: 30 }
+  - step: { exercise_id: spinal-twist, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: L, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: deep-inhale-to-exhale, duration_s: 10 }

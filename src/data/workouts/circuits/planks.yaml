@@ -1,0 +1,158 @@
+name: Planks
+description: Full plank workout covering all plank variations — front, side, reverse, dynamic and unilateral.
+plan:
+
+  # --- planks, low ---
+  - step:
+      exercise_id: plank-low
+      duration_s: 20
+  - step:
+      exercise_id: plank-low-leg-up
+      duration_s: 20
+      label: R
+  - step:
+      exercise_id: plank-low-leg-up
+      duration_s: 20
+      label: L
+      image_flip: true
+
+  # --- side planks, low ---
+  # R
+  - step:
+      exercise_id: plank-side-low
+      label: R
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-low-leg-up
+      label: R
+      image_flip: true
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-low-rotational
+      label: R
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-low-crunch
+      label: R
+      duration_s: 20
+  # L
+  - step:
+      exercise_id: plank-side-low
+      label: L
+      image_flip: true
+      duration_s: 20
+
+  - step:
+      exercise_id: plank-side-low-leg-up
+      label: L
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-low-rotational
+      label: L
+      image_flip: true
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-low-crunch
+      label: L
+      image_flip: true
+      duration_s: 20
+
+  # --- planks, high ---
+  - step:
+      exercise_id: plank-high
+      duration_s: 20
+  - step:
+      exercise_id: plank-high-single-hand-forward
+      duration_s: 20
+      label: R
+  - step:
+      exercise_id: plank-high-single-hand-forward
+      duration_s: 20
+      label: L
+      image_flip: true
+  - step:
+      exercise_id: plank-high-leg-up
+      label: L
+      duration_s: 20
+  - step:
+      exercise_id: plank-high-leg-up
+      duration_s: 20
+      label: R
+      image_flip: true
+
+
+  # --- planks, high, dynamic ---
+  - step:
+      exercise_id: plank-high-taps
+      duration_s: 20
+  - step:
+      exercise_id: plank-high-crunch
+      duration_s: 20
+  - step:
+      exercise_id: plank-high-jack
+      duration_s: 20
+
+  # --- side planks, high ---
+  # R 
+  - step:
+      exercise_id: plank-side-high
+      label: R
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-high-star
+      label: R
+      image_flip: true
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-high-star-dynamic
+      label: R
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-crunch-upper
+      label: R
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-crunch-lower
+      label: R
+      image_flip: true
+      duration_s: 20
+  # L
+  - step:
+      exercise_id: plank-side-high
+      label: L
+      image_flip: true
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-high-star
+      label: L
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-high-star-dynamic
+      label: L
+      image_flip: true
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-crunch-upper
+      label: L
+      image_flip: true
+      duration_s: 20
+  - step:
+      exercise_id: plank-side-crunch-lower
+      label: L
+      duration_s: 20
+
+  # --- planks, reverse ---
+  - step:
+      exercise_id: plank-reverse
+      duration_s: 20
+  - step:
+      exercise_id: plank-reverse-low
+      duration_s: 20
+
+  # --- cooldown ---
+  - step:
+      exercise_id: childs-pose
+      duration_s: 60
+  - step:
+      exercise_id: cat-cow
+      duration_s: 60

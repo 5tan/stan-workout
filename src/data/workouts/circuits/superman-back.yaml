@@ -1,0 +1,74 @@
+name: Superman - Back
+description: Back strength and stability workout built around all Superman and bird-dog variations, with complementary pulling and posture work.
+plan:
+  # --- Bird-dog / quad variants ---
+  - step:
+      exercise_id: superman-quad-alternating
+      duration_s: 30
+  - step:
+      exercise_id: superman-quad-knee-to-elbow
+      duration_s: 30
+  - step:
+      exercise_id: superman-quad-hold
+      duration_s: 30
+  - step:
+      exercise_id: superman-quad-knee-to-elbow
+      duration_s: 30
+      label: Other side
+      image_flip: true
+  - step:
+      exercise_id: superman-quad-hold
+      label: Other side
+      image_flip: true
+      duration_s: 30
+
+  # --- Superman progressions ---
+  - step:
+      exercise_id: superman-arms-raise
+      duration_s: 30
+  - step:
+      exercise_id: superman-arms-raise-hold
+      duration_s: 30
+  - step:
+      exercise_id: superman-variant-2
+      duration_s: 30
+  - step:
+      exercise_id: superman-variant-2-hold
+      duration_s: 30
+  - step:
+      exercise_id: superman-alternating
+      duration_s: 30
+  - step:
+      exercise_id: superman
+      duration_s: 30
+  - step:
+      exercise_id: superman-hold
+      duration_s: 30
+  - step:
+      exercise_id: superman-variant-3
+      duration_s: 30
+  - step:
+      exercise_id: superman-variant-3-hold
+      duration_s: 30
+
+  # --- Cooldown ---
+  - step:
+      exercise_id: childs-pose
+      duration_s: 30
+  - step:
+      exercise_id: stretch-thoracic-rotations
+      duration_s: 30
+  - step:
+      exercise_id: stretch-thoracic-rotations
+      duration_s: 30
+      label: Other side
+      image_flip: true
+  - step:
+      exercise_id: spinal-twist
+      label: R
+      duration_s: 30
+  - step:
+      exercise_id: spinal-twist
+      label: L
+      image_flip: true
+      duration_s: 30

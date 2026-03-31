@@ -1,0 +1,37 @@
+name: Glutes
+description: "Bodyweight only"
+plan:
+
+  # --- Standing ---
+  - step: { exercise_id: squat, duration_s: 30 }
+  - step: { exercise_id: squat-sumo-calf-raise, duration_s: 30 }
+  - step: { exercise_id: lunge-lateral, label: R, duration_s: 30 }
+  - step: { exercise_id: lunge-lateral, label: L, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: squat-jump, duration_s: 30 }
+
+  # --- Supine: glute bridges ---
+  - step: { exercise_id: glute-bridge-frog-pump, duration_s: 30 }
+  - step: { exercise_id: glute-bridge-march, duration_s: 30 }
+  - step: { exercise_id: glute-bridge-single-leg-straight, label: R, duration_s: 30 }
+  - step: { exercise_id: glute-bridge-single-leg-straight, label: L, image_flip: true, duration_s: 30 }
+
+  # --- Elevated bridges ---
+  - step: { exercise_id: glute-bridge-elevated, duration_s: 30 }
+  - step: { exercise_id: glute-bridge-elevated-single-leg, label: R, duration_s: 30 }
+  - step: { exercise_id: glute-bridge-elevated-single-leg, label: L, image_flip: true, duration_s: 30 }
+
+  # --- Prone ---
+  - step: { exercise_id: glute-lifts-prone-position, duration_s: 30 }
+
+  # --- Lateral: clamshells ---
+  - step: { exercise_id: clamshells, label: R, duration_s: 30 }
+  - step: { exercise_id: clamshells, label: L, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: clamshell-advanced, label: R, duration_s: 30 }
+  - step: { exercise_id: clamshell-advanced, label: L, image_flip: true, duration_s: 30 }
+
+  # --- Cooldown ---
+  - step: { exercise_id: stretch-figure-4, label: L, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: spinal-twist, label: L, duration_s: 30 }
+  - step: { exercise_id: spinal-twist, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: deep-inhale-to-exhale, duration_s: 10 }

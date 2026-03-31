@@ -1,0 +1,64 @@
+name: Warm-up
+description: Full-body warm-up. Joint mobility → dynamic stretches → light cardio.
+plan:
+  # --- Phase 1: Joint mobilization ---
+  - step:
+      exercise_id: wrists-warm-up
+      duration_s: 20
+  - step:
+      label: Direction 1
+      exercise_id: shoulder-roll
+      duration_s: 15
+  - step:
+      label: Direction 2
+      exercise_id: shoulder-roll
+      duration_s: 15
+  - step:
+      exercise_id: hip-circles-standing
+      label: R
+      duration_s: 15
+  - step:
+      exercise_id: hip-circles-standing
+      label: L
+      image_flip: true
+      duration_s: 15
+  - step:
+      exercise_id: upper-body-twist
+      duration_s: 20
+  - step:
+      exercise_id: wall-angels
+      duration_s: 20
+  - step:
+      exercise_id: crunch-standing-alternating
+      duration_s: 20
+
+  # --- Phase 2: Dynamic stretches ---
+  - step:
+      exercise_id: leg-swing
+      label: R
+      duration_s: 15
+  - step:
+      exercise_id: leg-swing
+      label: L
+      image_flip: true
+      duration_s: 15
+  - step:
+      exercise_id: lunge-walking
+      label: R
+      duration_s: 15
+  - step:
+      exercise_id: lunge-walking
+      label: L
+      image_flip: true
+      duration_s: 15
+
+  # --- Phase 3: Light cardio ---
+  - step:
+      exercise_id: jumping-jack
+      duration_s: 30
+  - step:
+      exercise_id: walk-out-to-plank-taps
+      duration_s: 40
+  - step:
+      exercise_id: mountain-climbers
+      duration_s: 30
