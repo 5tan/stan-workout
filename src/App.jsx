@@ -310,6 +310,7 @@ const parseWorkouts = () => {
           description: String(parsed.description ?? ''),
           folder,
           plan: processedPlan,
+          filePath: modulePath.replace(/^\.\//, ''),
         }
       } catch {
         return null
@@ -1100,7 +1101,15 @@ function WorkoutPage({ workouts, catalog }) {
       data-cy="workout-view"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-xl font-semibold">{selectedWorkout.name}</h1>
+        <h1 className="text-xl font-semibold">
+          <a
+            href={`https://github.com/5tan/stan-workout/blob/main/src/${selectedWorkout.filePath}`}
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {selectedWorkout.name}
+          </a>
+        </h1>
         <button
           type="button"
           className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
