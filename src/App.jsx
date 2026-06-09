@@ -922,14 +922,15 @@ function WorkoutPage({ workouts, catalog }) {
             else if (elapsedTicks === prepTicks) {
               speakText('Go!')
             }
-            // Rep phase: announce rep number at end of each rep interval
+            // Rep phase: announce rep number (counting down) at end of each rep interval
             else {
               const timeIntoRepsTicks = elapsedTicks - prepTicks
               const timeAfterInitialTicks = timeIntoRepsTicks - initialTicks_
               if (timeAfterInitialTicks > 0 && timeAfterInitialTicks % repDurTicks === 0) {
                 const repNumber = timeAfterInitialTicks / repDurTicks
-                if (repNumber >= 1 && repNumber <= reps.reps_num) {
-                  speakText(repNumber === reps.reps_num ? `finally ${repNumber}` : String(repNumber))
+                const repsRemaining = reps.reps_num - repNumber + 1
+                if (repsRemaining >= 1 && repsRemaining <= reps.reps_num) {
+                  speakText(String(repsRemaining))
                 }
               }
             }
@@ -1253,7 +1254,7 @@ function WorkoutPage({ workouts, catalog }) {
                     </>
                   ) : (
                     <span className="text-[22px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
-                      {phase?.phase === 'rep' ? `${phase.completedReps}/${total}` : `${total}/${total}`}
+                      {phase?.phase === 'rep' ? `${total - phase.completedReps}/${total}` : `${total}/${total}`}
                     </span>
                   )}
                 </div>
