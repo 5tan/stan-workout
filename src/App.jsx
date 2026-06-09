@@ -523,7 +523,7 @@ function CatalogView({ items, workouts }) {
           onClick={() => navigate('/')}
           data-cy="catalog-back"
         >
-          Back to menu
+          Menu
         </button>
         <p className="mt-4 mb-2 text-xs font-bold uppercase tracking-widest text-gray-500">Contents</p>
         <ul className="space-y-px text-sm">
@@ -746,6 +746,7 @@ function WorkoutPage({ workouts, catalog }) {
   const [completed, setCompleted] = useState(false)
   const [mediaMissing, setMediaMissing] = useState(false)
   const [wakeLockIssue, setWakeLockIssue] = useState(false)
+  const [view, setView] = useState('workout')
 
   const wakeLockRef = useRef(null)
   const remainingTicksRef = useRef(initialTicks)
@@ -1110,232 +1111,298 @@ function WorkoutPage({ workouts, catalog }) {
             {selectedWorkout.name}
           </a>
         </h1>
-        <button
-          type="button"
-          className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
-          onClick={() => navigate('/')}
-          data-cy="back-to-menu"
-        >
-          Back to menu
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-white"
+            onClick={() => setView(view === 'workout' ? 'preview' : 'workout')}
+            data-cy="toggle-view"
+            title={view === 'workout' ? 'Workout Preview' : 'Back to Workout'}
+          >
+            {view === 'workout' ? (
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            ) : (
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            )}
+          </button>
+          <button
+            type="button"
+            className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
+            onClick={() => navigate('/')}
+            data-cy="back-to-menu"
+          >
+            Menu
+          </button>
+        </div>
       </div>
 
-      <div className="rounded border border-gray-300 bg-white p-3">
-        <div className="text-lg font-medium" data-cy="current-step-name">
-          <span className="text-gray-600">
-            ({currentExerciseNumber}/{totalExercises})
-          </span>
-          <span className="text-black"> {currentStepDisplayName}</span>
-        </div>
-
-        <div className="mt-1 flex flex-wrap items-end gap-2">
-          <div className="flex flex-wrap items-end gap-2">
-            <div className="text-5xl font-bold tabular-nums" data-cy="timer">
-              {formatClock(remainingSeconds)}
-            </div>
-          </div>
-
-          <div className="ml-auto flex flex-wrap justify-end gap-2">
-            <button
-              type="button"
-              className="rounded border border-gray-300 px-3 py-2"
-              onClick={toggleRunning}
-              data-cy="start-pause"
-            >
-              {isRunning ? 'Pause' : 'Start'}
-            </button>
-            <button
-              type="button"
-              className="rounded border border-gray-300 px-3 py-2"
-              onClick={() => jumpToStep(currentStepIndex - 1)}
-              data-cy="prev-step"
-            >
-              Prev
-            </button>
-            <button
-              type="button"
-              className="rounded border border-gray-300 px-3 py-2"
-              onClick={() => jumpToStep(currentStepIndex + 1)}
-              data-cy="next-step"
-            >
-              Next
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-2 space-y-2">
-          <div>
-            <div className="mb-0.5 flex items-center justify-between text-sm text-gray-600">
-              <span>
-                Exercise: {formatClock(exerciseElapsedSeconds)} / {formatClock(currentExerciseDuration)}, ETA: {formatClock(remainingSeconds)}{currentStep?.reps && (
-                  <span className="ml-1 text-sm text-gray-400">- {currentStep.reps.reps_num} reps x {currentStep.reps.rep_duration_s}s</span>
-                )}
+      {view === 'workout' ? (
+        <>
+          <div className="rounded border border-gray-300 bg-white p-3">
+            <div className="text-lg font-medium" data-cy="current-step-name">
+              <span className="text-gray-600">
+                ({currentExerciseNumber}/{totalExercises})
               </span>
-              <span className="text-xs text-gray-500">{Math.round(exerciseProgress)}%</span>
+              <span className="text-black"> {currentStepDisplayName}</span>
             </div>
-            <div
-              className="h-3 w-full cursor-pointer overflow-hidden rounded bg-gray-200"
-              data-cy="exercise-progress-bar"
-              onClick={handleExerciseBarClick}
-              role="button"
-              tabIndex={0}
-            >
-              <div
-                className="h-full bg-blue-500 pointer-events-none"
-                style={{ width: `${exerciseProgress}%`, transition: stepJustChanged ? 'none' : 'width 1s linear' }}
-              />
-            </div>
-          </div>
 
-          <div>
-            <div
-              className="mb-0.5 flex items-center justify-between text-sm text-gray-600"
-              data-cy="workout-progress-label"
-            >
-              <span>
-                Workout: {formatClock(elapsedWorkoutSeconds)} / {formatClock(totalWorkoutSeconds)}, ETA: {formatClock(totalWorkoutSeconds - elapsedWorkoutSeconds)}
-              </span>
-              <span className="text-xs text-gray-500">{Math.round(workoutProgress)}%</span>
-            </div>
-            <div
-              className="h-3 w-full cursor-pointer overflow-hidden rounded bg-gray-200"
-              data-cy="workout-progress-bar"
-              onClick={handleWorkoutBarClick}
-              role="button"
-              tabIndex={0}
-            >
-              <div className="flex h-full w-full gap-px bg-gray-200">
-                {workoutStepProgress.map((segmentProgress, segmentIndex) => {
-                  const step = selectedWorkout?.plan?.[segmentIndex]
-                  const isRest = step?.id === 'rest'
-                  const colors = isRest ? REST_COLOR : SEGMENT_COLORS[step?.colorIndex ?? 0]
-                  return (
-                    <div
-                      key={segmentIndex}
-                      className="h-full basis-0"
-                      style={{
-                        flexGrow: step?.duration_s ?? 1,
-                        backgroundColor: colors.light,
-                      }}
-                    >
-                      <div
-                        className="h-full"
-                        style={{
-                          width: `${segmentProgress}%`,
-                          backgroundColor: colors.dark,
-                          transition: stepJustChanged ? 'none' : 'width 1s linear',
-                        }}
-                      />
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      {(wakeLockIssue || !wakeLockSupported) && (
-        <p className="text-xs text-amber-700" data-cy="wake-lock-note">
-          Screen wake lock is unavailable. Your phone may dim or lock during workout.
-        </p>
-      )}
-
-      {!completed && (
-        <div className="relative flex min-h-0 flex-1 rounded border border-gray-300 bg-white p-3">
-          {currentStep?.reps && (() => {
-            const phase = getRepsPhase(Math.floor(exerciseElapsedSeconds), currentStep.reps)
-            const total = currentStep.reps.reps_num
-            const showCountdown = phase?.phase === 'get-ready' || phase?.phase === 'prep'
-            const countdown = phase?.phase === 'prep' ? Math.ceil(phase.countdown) : currentStep.reps.prep_s
-            return (
-              <div className="absolute left-4 top-4 z-10 flex flex-col items-center">
-                <div className="flex h-24 w-24 flex-col items-center justify-center rounded bg-blue-300 p-1">
-                  {showCountdown ? (
-                    <>
-                      <span className="text-[18px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
-                        {total} reps
-                      </span>
-                      <span className="mt-1 text-[18px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
-                        in {countdown}…
-                      </span>
-                    </>
-                  ) : (
-                    <span className="text-[22px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
-                      {phase?.phase === 'rep' ? `${total - phase.completedReps}/${total}` : `${total}/${total}`}
-                    </span>
-                  )}
+            <div className="mt-1 flex flex-wrap items-end gap-2">
+              <div className="flex flex-wrap items-end gap-2">
+                <div className="text-5xl font-bold tabular-nums" data-cy="timer">
+                  {formatClock(remainingSeconds)}
                 </div>
               </div>
-            )
-          })()}
-          {currentStep?.weight && (
-            <div className="absolute right-4 top-4 z-10 flex flex-col items-center">
-              <div className="relative">
-                <img
-                  src={withBaseUrl('weight_icon.webp')}
-                  alt="weight"
-                  className="h-24 w-24 rounded bg-yellow-300 p-1"
-                />
-                <span className="absolute inset-0 flex items-center justify-center text-[22px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
-                  {currentStep.weight}
-                </span>
+
+              <div className="ml-auto flex flex-wrap justify-end gap-2">
+                <button
+                  type="button"
+                  className="rounded border border-gray-300 px-3 py-2"
+                  onClick={toggleRunning}
+                  data-cy="start-pause"
+                >
+                  {isRunning ? 'Pause' : 'Start'}
+                </button>
+                <button
+                  type="button"
+                  className="rounded border border-gray-300 px-3 py-2"
+                  onClick={() => jumpToStep(currentStepIndex - 1)}
+                  data-cy="prev-step"
+                >
+                  Prev
+                </button>
+                <button
+                  type="button"
+                  className="rounded border border-gray-300 px-3 py-2"
+                  onClick={() => jumpToStep(currentStepIndex + 1)}
+                  data-cy="next-step"
+                >
+                  Next
+                </button>
               </div>
             </div>
-          )}
-          {!currentMedia?.image && !currentMedia?.video && (
-            <p className="text-sm text-gray-600">No media for this exercise.</p>
+
+            <div className="mt-2 space-y-2">
+              <div>
+                <div className="mb-0.5 flex items-center justify-between text-sm text-gray-600">
+                  <span>
+                    Exercise: {formatClock(exerciseElapsedSeconds)} / {formatClock(currentExerciseDuration)}, ETA: {formatClock(remainingSeconds)}{currentStep?.reps && (
+                      <span className="ml-1 text-sm text-gray-400">- {currentStep.reps.reps_num} reps x {currentStep.reps.rep_duration_s}s</span>
+                    )}
+                  </span>
+                  <span className="text-xs text-gray-500">{Math.round(exerciseProgress)}%</span>
+                </div>
+                <div
+                  className="h-3 w-full cursor-pointer overflow-hidden rounded bg-gray-200"
+                  data-cy="exercise-progress-bar"
+                  onClick={handleExerciseBarClick}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div
+                    className="h-full bg-blue-500 pointer-events-none"
+                    style={{ width: `${exerciseProgress}%`, transition: stepJustChanged ? 'none' : 'width 1s linear' }}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div
+                  className="mb-0.5 flex items-center justify-between text-sm text-gray-600"
+                  data-cy="workout-progress-label"
+                >
+                  <span>
+                    Workout: {formatClock(elapsedWorkoutSeconds)} / {formatClock(totalWorkoutSeconds)}, ETA: {formatClock(totalWorkoutSeconds - elapsedWorkoutSeconds)}
+                  </span>
+                  <span className="text-xs text-gray-500">{Math.round(workoutProgress)}%</span>
+                </div>
+                <div
+                  className="h-3 w-full cursor-pointer overflow-hidden rounded bg-gray-200"
+                  data-cy="workout-progress-bar"
+                  onClick={handleWorkoutBarClick}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className="flex h-full w-full gap-px bg-gray-200">
+                    {workoutStepProgress.map((segmentProgress, segmentIndex) => {
+                      const step = selectedWorkout?.plan?.[segmentIndex]
+                      const isRest = step?.id === 'rest'
+                      const colors = isRest ? REST_COLOR : SEGMENT_COLORS[step?.colorIndex ?? 0]
+                      return (
+                        <div
+                          key={segmentIndex}
+                          className="h-full basis-0"
+                          style={{
+                            flexGrow: step?.duration_s ?? 1,
+                            backgroundColor: colors.light,
+                          }}
+                        >
+                          <div
+                            className="h-full"
+                            style={{
+                              width: `${segmentProgress}%`,
+                              backgroundColor: colors.dark,
+                              transition: stepJustChanged ? 'none' : 'width 1s linear',
+                            }}
+                          />
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {(wakeLockIssue || !wakeLockSupported) && (
+            <p className="text-xs text-amber-700" data-cy="wake-lock-note">
+              Screen wake lock is unavailable. Your phone may dim or lock during workout.
+            </p>
           )}
 
-          {currentMedia?.video && !mediaMissing && (
-            <video
-              controls
-              className="h-full max-h-full w-full rounded border border-gray-200 object-contain"
-              src={currentMedia.video}
-              style={mediaTransformStyle}
-              onError={() => setMediaMissing(true)}
-              data-cy="exercise-video"
-            />
+          {!completed && (
+            <div className="relative flex min-h-0 flex-1 rounded border border-gray-300 bg-white p-3">
+              {currentStep?.reps && (() => {
+                const phase = getRepsPhase(Math.floor(exerciseElapsedSeconds), currentStep.reps)
+                const total = currentStep.reps.reps_num
+                const showCountdown = phase?.phase === 'get-ready' || phase?.phase === 'prep'
+                const countdown = phase?.phase === 'prep' ? Math.ceil(phase.countdown) : currentStep.reps.prep_s
+                return (
+                  <div className="absolute left-4 top-4 z-10 flex flex-col items-center">
+                    <div className="flex h-24 w-24 flex-col items-center justify-center rounded bg-blue-300 p-1">
+                      {showCountdown ? (
+                        <>
+                          <span className="text-[18px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
+                            {total} reps
+                          </span>
+                          <span className="mt-1 text-[18px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
+                            in {countdown}…
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-[22px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
+                          {phase?.phase === 'rep' ? `${total - phase.completedReps}/${total}` : `${total}/${total}`}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )
+              })()}
+              {currentStep?.weight && (
+                <div className="absolute right-4 top-4 z-10 flex flex-col items-center">
+                  <div className="relative">
+                    <img
+                      src={withBaseUrl('weight_icon.webp')}
+                      alt="weight"
+                      className="h-24 w-24 rounded bg-yellow-300 p-1"
+                    />
+                    <span className="absolute inset-0 flex items-center justify-center text-[22px] font-bold leading-none text-white [text-shadow:0_0_6px_#000,0_0_3px_#000]">
+                      {currentStep.weight}
+                    </span>
+                  </div>
+                </div>
+              )}
+              {!currentMedia?.image && !currentMedia?.video && (
+                <p className="text-sm text-gray-600">No media for this exercise.</p>
+              )}
+
+              {currentMedia?.video && !mediaMissing && (
+                <video
+                  controls
+                  className="h-full max-h-full w-full rounded border border-gray-200 object-contain"
+                  src={currentMedia.video}
+                  style={mediaTransformStyle}
+                  onError={() => setMediaMissing(true)}
+                  data-cy="exercise-video"
+                />
+              )}
+
+              {!currentMedia?.video && currentMedia?.image && !mediaMissing && (
+                <img
+                  className="h-full max-h-full w-full rounded border border-gray-200 object-contain"
+                  src={currentMedia.image}
+                  alt={currentStepDisplayName}
+                  style={mediaTransformStyle}
+                  onError={() => setMediaMissing(true)}
+                  data-cy="exercise-image"
+                />
+              )}
+
+              {mediaMissing && (
+                <p className="text-sm text-amber-700">Media file is missing.</p>
+              )}
+            </div>
           )}
 
-          {!currentMedia?.video && currentMedia?.image && !mediaMissing && (
-            <img
-              className="h-full max-h-full w-full rounded border border-gray-200 object-contain"
-              src={currentMedia.image}
-              alt={currentStepDisplayName}
-              style={mediaTransformStyle}
-              onError={() => setMediaMissing(true)}
-              data-cy="exercise-image"
-            />
+          {completed && (
+            <div
+              className="rounded border border-green-400 bg-green-50 p-4 font-medium text-green-700"
+              data-cy="workout-completed"
+            >
+              Workout completed. Great job!
+            </div>
           )}
 
-          {mediaMissing && (
-            <p className="text-sm text-amber-700">Media file is missing.</p>
+          {!completed && nextStep && (
+            <div className="shrink-0 rounded border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-500" data-cy="next-step-preview">
+              <span className="mr-1.5 font-medium uppercase tracking-wide text-gray-400 text-xs">Next:</span>
+              <span className="text-gray-700 font-medium">{nextStepDisplayName}</span>
+              {(nextStep.reps || nextStep.weight) && (
+                <span className="ml-2 text-gray-500">
+                  {nextStep.reps && `${nextStep.reps.reps_num} reps`}
+                  {nextStep.reps && nextStep.weight && ' × '}
+                  {nextStep.weight && nextStep.weight}
+                </span>
+              )}
+            </div>
           )}
-        </div>
-      )}
+        </>
+      ) : (
+        <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden rounded border border-gray-300 bg-white p-3" data-cy="workout-preview-view">
+          <h2 className="text-lg font-semibold">Workout Preview</h2>
+          <div className="flex-1 overflow-y-auto space-y-1 pr-1">
+            {selectedWorkout.plan.map((step, index) => {
+              const isCurrent = index === currentStepIndex
+              const isRest = step.id === 'rest'
+              const colors = isRest ? REST_COLOR : SEGMENT_COLORS[step.colorIndex ?? 0]
+              const media = catalog[step.id]
+              const displayName = media?.display_name
+                ? (step.label ? `${media.display_name} (${step.label})` : media.display_name)
+                : (step.id ?? 'N/A')
 
-      {completed && (
-        <div
-          className="rounded border border-green-400 bg-green-50 p-4 font-medium text-green-700"
-          data-cy="workout-completed"
-        >
-          Workout completed. Great job!
-        </div>
-      )}
-
-      {!completed && nextStep && (
-        <div className="shrink-0 rounded border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-500" data-cy="next-step-preview">
-          <span className="mr-1.5 font-medium uppercase tracking-wide text-gray-400 text-xs">Next:</span>
-          <span className="text-gray-700 font-medium">{nextStepDisplayName}</span>
-          {(nextStep.reps || nextStep.weight) && (
-            <span className="ml-2 text-gray-500">
-              {nextStep.reps && `${nextStep.reps.reps_num} reps`}
-              {nextStep.reps && nextStep.weight && ' × '}
-              {nextStep.weight && nextStep.weight}
-            </span>
-          )}
+              return (
+                <div
+                  key={index}
+                  style={{ backgroundColor: colors.light }}
+                  className={`relative rounded border-l-4 p-3 transition-all ${isCurrent ? 'border-blue-600 ring-2 ring-blue-600 ring-inset' : 'border-transparent'
+                    }`}
+                  onClick={() => jumpToStep(index)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-1 flex-col">
+                      <span className={`font-medium ${isCurrent ? 'text-blue-700' : 'text-gray-800'}`}>
+                        {index + 1}. {displayName}
+                      </span>
+                      {step.weight && (
+                        <span className="text-xs text-gray-500 font-medium">
+                          Weight: {step.weight}
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-sm font-medium text-gray-600">
+                      {step.reps ? `${step.reps.reps_num} reps` : formatClock(step.duration_s)}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       )}
     </main>
