@@ -16,13 +16,13 @@ plan:
     - step: { exercise_id: russian-twist, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, weight: KB16kg}
 
     - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "R, b+5+5", weight: DB22kg }
+    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "R, b+4x5+2x2.5", weight: DB27kg }
 
     - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "L, b+5+5", weight: DB22kg, image_flip: true}
+    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "L, b+4x5+2x2.5", weight: DB27kg, image_flip: true}
 
     - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: glute-bridge-weight, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 3 }, label: b+5+5, weight: DB22kg }
+    - step: { exercise_id: glute-bridge-weight, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 3 }, label: "b+4x5+2x2.5", weight: DB27kg }
 
     - step: { exercise_id: rest, duration_s: 50 }
     - step: { exercise_id: crunch-hold, durations_s: 60 }
