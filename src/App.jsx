@@ -1102,6 +1102,23 @@ function WorkoutPage({ workouts, catalog }) {
       data-cy="workout-view"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
+        <button
+          type="button"
+          className="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-white"
+          onClick={() => setView(view === 'workout' ? 'preview' : 'workout')}
+          data-cy="toggle-view"
+          title={view === 'workout' ? 'Workout Preview' : 'Back to Workout'}
+        >
+          {view === 'workout' ? (
+            <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          )}
+        </button>
         <h1 className="text-xl font-semibold">
           <a
             href={`https://github.com/5tan/stan-workout/blob/main/src/${selectedWorkout.filePath}`}
@@ -1111,33 +1128,14 @@ function WorkoutPage({ workouts, catalog }) {
             {selectedWorkout.name}
           </a>
         </h1>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-white"
-            onClick={() => setView(view === 'workout' ? 'preview' : 'workout')}
-            data-cy="toggle-view"
-            title={view === 'workout' ? 'Workout Preview' : 'Back to Workout'}
-          >
-            {view === 'workout' ? (
-              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            ) : (
-              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            )}
-          </button>
-          <button
-            type="button"
-            className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
-            onClick={() => navigate('/')}
-            data-cy="back-to-menu"
-          >
-            Menu
-          </button>
-        </div>
+        <button
+          type="button"
+          className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
+          onClick={() => navigate('/')}
+          data-cy="back-to-menu"
+        >
+          Menu
+        </button>
       </div>
 
       {view === 'workout' ? (
