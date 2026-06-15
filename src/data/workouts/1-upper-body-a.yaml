@@ -10,15 +10,15 @@ plan:
 
   # --- Set 1 ---
   - &set1
-    - step: { exercise_id: dumbbell-bench-press, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 1.25", weight: 14.5kg}
+    - step: { exercise_id: dumbbell-bench-press, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "b + 5 + 2.5", weight: 17kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
     - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "ALL", weight: 19.5kg}
+    - step: { exercise_id: rest, duration_s: 10 }
     - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "ALL", weight: 19.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    # - step: { exercise_id: dumbbell-lateral-rises, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: "b + 2.5 ", weight: 7kg}
-    - step: { exercise_id: dumbbell-lateral-rises, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, weight: 6kg}
+    - step: { exercise_id: dumbbell-lateral-rises, reps: { prep_s: 10, reps_num: 5, rep_duration_s: 4 }, label: hex, weight: 7.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
     - step: { exercise_id: dumbbell-shoulder-press, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
@@ -28,10 +28,9 @@ plan:
     - step: { exercise_id: rest, duration_s: 50 }
 
     - step: { exercise_id: dumbbell-bench-fly, reps: { prep_s: 10, reps_num: 9, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
-    #- step: { exercise_id: dumbbell-bench-fly, reps: { prep_s: 10, reps_num: 15, rep_duration_s: 4 }, label: "hex", weight: 7.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
     
-    - step: { exercise_id: push-ups-diamond, reps: { prep_s: 10, reps_num: 9, rep_duration_s: 3 } }
+    - step: { exercise_id: push-ups-diamond, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 3 } }
 
   # --- Set 2 (repeat) ---
   - step: { exercise_id: rest, duration_s: 90 }

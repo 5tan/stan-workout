@@ -10,25 +10,25 @@ plan:
 
   # --- Set 1 ---
   - &set1
-    - step: { exercise_id: dumbbell-chest-press-incline, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 1.25", weight: 14.5kg}
+    - step: { exercise_id: dumbbell-chest-press-incline, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 2.25", weight: 17kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-row-bench-symmetric, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 1.25", weight: 14.5kg}
+    - step: { exercise_id: dumbbell-row-bench-symmetric, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 5 + 2.25", weight: 17kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-front-rise, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, weight: 6kg}
+    - step: { exercise_id: dumbbell-front-rise, reps: { prep_s: 10, reps_num: 5, rep_duration_s: 4 }, label:hex weight: 7.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
     - step: { exercise_id: dumbbell-shoulder-press-seated, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: incline-svend-press, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: disk, weight: 5kg}
+    - step: { exercise_id: incline-svend-press, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: disks, weight: 2x5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
     - step: { exercise_id: dumbbell-hammer-curl, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-skull-crusher, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
+    - step: { exercise_id: dumbbell-skull-crusher, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "b + 2.5 + 1.25", weight: 9.5kg}
 
   # --- Set 2 (repeat) ---
   - step: { exercise_id: rest, duration_s: 90 }
