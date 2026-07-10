@@ -11,15 +11,21 @@ plan:
     
     # supine
     - step: { exercise_id: hip-band-bridge-dip-abduction, duration_s: 30 }
+    - step: { exercise_id: hip-band-bridge-dip-abduction, duration_s: 30 , label: pulse}
+
     # supine, sided
     - step: { exercise_id: hip-band-lateral-leg-raise, label: "R", duration_s: 30 }
+    - step: { exercise_id: hip-band-lateral-leg-raise, label: "R pulse", duration_s: 30 }
     - step: { exercise_id: hip-band-lateral-leg-raise, label: "L", image_flip: true, duration_s: 30 }
+    - step: { exercise_id: hip-band-lateral-leg-raise, label: "L pulse", image_flip: true, duration_s: 30 }
+
     # quad
     - step: { exercise_id: hip-band-fire-hydrant, label: "R", duration_s: 30  }
+    - step: { exercise_id: hip-band-fire-hydrant, label: "R pulse", duration_s: 30  }
     - step: { exercise_id: hip-band-fire-hydrant, label: "L", image_flip: true, duration_s: 30  }
+    - step: { exercise_id: hip-band-fire-hydrant, label: "L pulse", image_flip: true, duration_s: 30  }
+
     - step: { exercise_id: hip-band-kick-back, label: "R", duration_s: 30  }
+    - step: { exercise_id: hip-band-kick-back, label: "R pulse", duration_s: 30  }
     - step: { exercise_id: hip-band-kick-back, label: "L", image_flip: true, duration_s: 30  }
-  
-  # --- Set 2 (repeat) ---
-  - step: { exercise_id: rest, duration_s: 30 }
-  - *set1
+    - step: { exercise_id: hip-band-kick-back, label: "L pulse", image_flip: true, duration_s: 30  }

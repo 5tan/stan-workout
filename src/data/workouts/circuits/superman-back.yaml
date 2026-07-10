@@ -50,25 +50,3 @@ plan:
   - step:
       exercise_id: superman-variant-3-hold
       duration_s: 30
-
-  # --- Cooldown ---
-  - step:
-      exercise_id: childs-pose
-      duration_s: 30
-  - step:
-      exercise_id: stretch-thoracic-rotations
-      duration_s: 30
-  - step:
-      exercise_id: stretch-thoracic-rotations
-      duration_s: 30
-      label: Other side
-      image_flip: true
-  - step:
-      exercise_id: spinal-twist
-      label: R
-      duration_s: 30
-  - step:
-      exercise_id: spinal-twist
-      label: L
-      image_flip: true
-      duration_s: 30

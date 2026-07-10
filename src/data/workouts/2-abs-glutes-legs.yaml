@@ -10,25 +10,22 @@ plan:
 
   # --- Set 1 ---
   - &set1
-    - step: { exercise_id: kettlebell-romanian-deadlift, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 5 }, label: 2xALL, weight: DB39kg}
+    - step: { exercise_id: rest, duration_s: 50 }
+    - step: { exercise_id: squat, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 3 }, label: "BP: 2xAllDB", weight: 39kg }
+
+    - step: { exercise_id: kettlebell-romanian-deadlift, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 5 }, label: 2xAllDB, weight: 39kg}
 
     - step: { exercise_id: rest, duration_s: 50 }
     - step: { exercise_id: russian-twist, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, weight: KB16kg}
 
     - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "R, b+4x5+2x2.5", weight: DB27kg }
+    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "R, BP: 1xAllDB+KB10", weight: 29.5kg }
 
     - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "L, b+4x5+2x2.5", weight: DB27kg, image_flip: true}
+    - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "L, BP: 1xAllDB+KB10", weight: 29.5kg, image_flip: true}
 
     - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: glute-bridge-weight, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 3 }, label: "b+4x5+2x2.5", weight: DB27kg }
-
-    - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: crunch-hold, durations_s: 60 }
-
-    - step: { exercise_id: rest, duration_s: 50 }
-    - step: { exercise_id: starfish-to-jack-knife, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 6 } }
+    - step: { exercise_id: dead-bug, durations_s: 90 }
 
   # --- Set 2 (repeat) ---
   - step: { exercise_id: rest, duration_s: 90 }
