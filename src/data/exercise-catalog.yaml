@@ -458,6 +458,9 @@
     - id: pushup-row-dumbbell
       display_name: Pushup row dumbbell
       image: pushup_row_dumbbell.gif
+    - id: pushup-archer
+      display_name: Archer push-up
+      image: push_up_archer.gif
 
 - section: Pull-ups & hanging
   items:
