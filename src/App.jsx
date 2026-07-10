@@ -1104,6 +1104,23 @@ function WorkoutPage({ workouts, catalog }) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <button
           type="button"
+          className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
+          onClick={() => navigate('/')}
+          data-cy="back-to-menu"
+        >
+          Menu
+        </button>
+        <h1 className="text-xl font-semibold">
+          <a
+            href={`https://github.com/5tan/stan-workout/blob/main/src/${selectedWorkout.filePath}`}
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {selectedWorkout.name}
+          </a>
+        </h1>
+        <button
+          type="button"
           className="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-white"
           onClick={() => setView(view === 'workout' ? 'preview' : 'workout')}
           data-cy="toggle-view"
@@ -1118,23 +1135,6 @@ function WorkoutPage({ workouts, catalog }) {
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           )}
-        </button>
-        <h1 className="text-xl font-semibold">
-          <a
-            href={`https://github.com/5tan/stan-workout/blob/main/src/${selectedWorkout.filePath}`}
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            {selectedWorkout.name}
-          </a>
-        </h1>
-        <button
-          type="button"
-          className="rounded border border-gray-300 bg-white px-3 py-2 text-sm"
-          onClick={() => navigate('/')}
-          data-cy="back-to-menu"
-        >
-          Menu
         </button>
       </div>
 
