@@ -10,27 +10,27 @@ plan:
 
   # --- Set 1 ---
   - &set1
-    - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: "R, b+4x5+2x2.5", weight: DB27kg }
+    - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 7, rep_duration_s: 4 }, label: "R, b+4x5+2x2.5", weight: DB27kg }
     - step: { exercise_id: rest, duration_s: 20 }
-    - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: "L, b+4x5+2x2.5", weight: DB27kg }
+    - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 7, rep_duration_s: 4 }, label: "L, b+4x5+2x2.5", weight: DB27kg }
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-lateral-rises, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: hex, weight: 2x7.5kg}
+    - step: { exercise_id: dumbbell-lateral-rises, reps: { prep_s: 10, reps_num: 7, rep_duration_s: 4 }, label: hex, weight: 2x7.5kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
     - step: { exercise_id: dumbbell-bench-press, reps: { prep_s: 10, reps_num: 10, rep_duration_s: 4 }, label: "2x(b+2x5+2x2.5)", weight: 2x17kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: push-ups-diamond, reps: { prep_s: 10, reps_num: 11, rep_duration_s: 3 } }
+    - step: { exercise_id: push-ups-diamond, reps: { prep_s: 10, reps_num: 12, rep_duration_s: 3 } }
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-shoulder-press, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: "2x(b+2x5)", weight: 2x12kg}
+    - step: { exercise_id: dumbbell-shoulder-press, reps: { prep_s: 10, reps_num: 7, rep_duration_s: 4 }, label: "2x(b+2x5)", weight: 2x12kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-bicep-curl, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: "2x(b+2x5)", weight: 2x12kg}
+    - step: { exercise_id: dumbbell-bicep-curl, reps: { prep_s: 10, reps_num: 7, rep_duration_s: 4 }, label: "2x(b+2x5)", weight: 2x12kg}
     - step: { exercise_id: rest, duration_s: 50 }
 
-    - step: { exercise_id: dumbbell-bench-fly, reps: { prep_s: 10, reps_num: 6, rep_duration_s: 4 }, label: "2x(b+2x5)", weight: 2x12kg}
+    - step: { exercise_id: dumbbell-bench-fly, reps: { prep_s: 10, reps_num: 7, rep_duration_s: 4 }, label: "2x(b+2x5)", weight: 2x12kg}
     
   # --- Set 2 (repeat) ---
   - step: { exercise_id: rest, duration_s: 90 }
