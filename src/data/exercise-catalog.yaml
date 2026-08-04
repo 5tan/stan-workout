@@ -35,6 +35,12 @@
         - id: arm-circles-a
           display_name: Arm circles B
           image: arm_circles_b.gif
+        - id: arm-circles-big-a
+          display_name: Arm circles big A
+          image: arm_circles_big_a.gif
+        - id: arm-circles-big-a
+          display_name: Arm circles big B
+          image: arm_circles_big_b.gif
     - name: Run/jump
       items:
         - id: butt-kicks
