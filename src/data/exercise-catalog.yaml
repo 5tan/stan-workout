@@ -29,6 +29,12 @@
         - id: shoulder-roll-b
           display_name: Shoulder roll B
           image: shoulder_roll_b.webp
+        - id: arm-circles-a
+          display_name: Arm circles A
+          image: arm_circles_a.gif
+        - id: arm-circles-a
+          display_name: Arm circles B
+          image: arm_circles_b.gif
     - name: Run/jump
       items:
         - id: butt-kicks
