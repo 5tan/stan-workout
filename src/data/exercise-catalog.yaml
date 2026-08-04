@@ -202,6 +202,12 @@
         - id: corkscrew
           display_name: Corkscrew
           image: corkscrew.webp
+        - id: plank-arm-circle-a
+          display_name: Plank arm circle A
+          image: plank_arm_circle_a.gif
+        - id: plank-arm-circle-a
+          display_name: Plank arm circle B
+          image: plank_arm_circle_b.gif
     - name: Planks, low
       items:
         - id: plank-low
