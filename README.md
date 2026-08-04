@@ -14,7 +14,7 @@ plan:
   - step: { exercise_id: wrists-warm-up, duration_s: 20 }
 
   # With label (shown as "Shoulder Roll (Direction 1)") and optional image_flip
-  - step: { exercise_id: shoulder-roll, label: Direction 1, duration_s: 15 }
+  - step: { exercise_id: shoulder-roll-a, label: Direction 1, duration_s: 15 }
   - step: { exercise_id: hip-circles-standing, label: Left, image_flip: true, duration_s: 15 }
 
   # Reps-based step — rep_duration_s rounded to nearest 0.5 s

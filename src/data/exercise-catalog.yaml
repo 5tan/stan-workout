@@ -23,9 +23,12 @@
         - id: leg-swing
           display_name: Leg swing
           image: leg_swing.gif
-        - id: shoulder-roll
-          display_name: Shoulder roll
-          image: shoulder-roll.webp
+        - id: shoulder-roll-a
+          display_name: Shoulder roll A
+          image: shoulder_roll_a.webp
+        - id: shoulder-roll-b
+          display_name: Shoulder roll B
+          image: shoulder_roll_b.webp
     - name: Run/jump
       items:
         - id: butt-kicks

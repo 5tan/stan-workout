@@ -9,12 +9,10 @@ plan:
       exercise_id: wrists-warm-up
       duration_s: 15
   - step:
-      label: Direction 1
-      exercise_id: shoulder-roll
+      exercise_id: shoulder-roll-a
       duration_s: 15
   - step:
-      label: Direction 2
-      exercise_id: shoulder-roll
+      exercise_id: shoulder-roll-b
       duration_s: 15
   - step:
       exercise_id: standing-toe-touch-kick
