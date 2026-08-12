@@ -791,12 +791,17 @@
         - id: knee-roll
           display_name: Knee roll
           image: knee_roll.webp
+    - name: Splits
+      items:
+        - id: split-straddle
+          display_name: Straddle split
+          image: split_straddle.png
 
 - section: Yoga
   items:
-    - id: trikonasana
-      display_name: Trikonasana
-      image: trikonasana.webp
+    - id: triangle
+      display_name: Triangle (Trikonasana)
+      image: triangle.jpg
     - id: childs-pose
       display_name: Child's pose
       image: childs_pose.jpg
@@ -806,6 +811,15 @@
     - id: dog-upward
       display_name: Upward dog (Urdhva Mukha Svanasana)
       image: dog-upward.avif
+    - id: ardha-uttanasana
+      display_name: Half standing forward fold (Ardha Uttanasana)
+      image: ardha_uttanasana.jpg
+    - id: supine-spinal-twist
+      display_name: Supine spinal twist (Supta Matsyendrasana)
+      image: supine_spinal_twist.jpg
+    - id: lunge-low
+      display_name: Low lunge (Anjaneyasana)
+      image: lunge_low.jpg    
 
 - section: Back
   subsections:

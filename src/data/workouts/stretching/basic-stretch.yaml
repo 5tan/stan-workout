@@ -1,0 +1,19 @@
+name: Basic stretch
+description: "Basic full body stretch"
+plan:
+  - step: { exercise_id: lunge-low, duration_s: 60 }
+  - step: { exercise_id: lunge-low, duration_s: 60, image_flip: true}
+
+  - step: { exercise_id: triangle, duration_s: 60 }
+  - step: { exercise_id: triangle, duration_s: 60, image_flip: true}
+
+  - step: { exercise_id: ardha-uttanasana, duration_s: 60 }
+  - step: { exercise_id: stretch-fold-forward-standing, duration_s: 60 }
+
+  - step: { exercise_id: split-straddle, duration_s: 60 }
+
+  - step: { exercise_id: supine-spinal-twist, label: L, duration_s: 60 }
+  - step: { exercise_id: supine-spinal-twist, label: R, image_flip: true, duration_s: 60 }
+  
+  - step: { exercise_id: stretch-figure-4, label: L, duration_s: 60 }
+  - step: { exercise_id: stretch-figure-4, label: R, image_flip: true, duration_s: 60 }
