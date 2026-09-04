@@ -353,6 +353,9 @@
   subsections:
     - name: Standing
       items:
+        - id: dumbbell-squeeze-bench-press
+          display_name: Dumbbell squeeze bench press
+          image: dumbbell-squeeze-bench-press.gif
         - id: dumbbell-shoulder-press
           display_name: Dumbbell shoulder press
           image: dumbbell_shoulder_press.gif
