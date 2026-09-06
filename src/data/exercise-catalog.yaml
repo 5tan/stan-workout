@@ -353,6 +353,9 @@
   subsections:
     - name: Standing
       items:
+        - id: dumbbell-bicep-curl-to-shoulder-press
+          display_name: Dumbbell bicep curl to shoulder press
+          image: dumbbell_bicep_curl_to_shoulder_press.png
         - id: dumbbell-squeeze-bench-press
           display_name: Dumbbell squeeze bench press
           image: dumbbell-squeeze-bench-press.gif
@@ -774,8 +777,16 @@
         - id: stretch-90-90
           display_name: Stretch 90-90
           image: stretch_90_90.webp
+    - name: Bench
+      items:
+        - id: stretch-arm-bench
+          display_name: Arm bench stretch
+          image: stretch_arm_bench.avif
     - name: Supine
       items:
+        - id: stretch-arm-floor
+          display_name: Arm floor stretch
+          image: stretch_arm_floor.jpeg
         - id: hip-and-lower-back-stretch
           display_name: Hip and lower back stretch
           image: hip_and_lower_back_stretch.webp

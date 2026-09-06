@@ -250,6 +250,37 @@ const processFlatPlan = (flatPlan, processedPlan, groupPerStep, isRestPerStep, g
       isRestPerStep.push(String(step.exercise_id) === 'rest')
     }
 
+    // Handle repeat directives
+    if (item.repeat && Array.isArray(item.steps)) {
+      const repeatCount = Number(item.repeat) || 1
+      const restS = parseDurationSeconds(item.rest_s)
+      for (let i = 0; i < repeatCount; i++) {
+        // Each repetition of the block gets its own sequence of group IDs,
+        // but that sequence is identical across all repetitions.
+        const repeatCounter = { value: groupCounter.value + 1 }
+        const flatNested = flattenPlan(item.steps, repeatCounter)
+        processFlatPlan(flatNested, processedPlan, groupPerStep, isRestPerStep, groupCounter)
+
+        if (restS && i < repeatCount - 1) {
+          processedPlan.push({
+            id: 'rest',
+            label: null,
+            duration_s: restS,
+            reps: null,
+            image_flip: false,
+            weight: null,
+          })
+          groupPerStep.push(groupId)
+          isRestPerStep.push(true)
+        }
+      }
+      // After all repetitions, advance the main counter by the number of groups
+      // used within the block so following blocks don't collide.
+      const repeatCounterForAdvance = { value: groupCounter.value + 1 }
+      flattenPlan(item.steps, repeatCounterForAdvance)
+      groupCounter.value = repeatCounterForAdvance.value
+    }
+
     // Handle include directives — recurse so nested includes are resolved
     if (item.include) {
       const includeFileName = String(item.include)
