@@ -12,7 +12,8 @@ plan:
     rest_s: 20
     steps: 
       - step: { exercise_id: dumbbell-bench-press, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "2xALL", weight: 2x19.5kg}
-      - step: { exercise_id: dumbbell-row, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "2xALL", weight: 2x19.5kg}
+      - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "R ALL", weight: 19.5kg}
+      - step: { exercise_id: dumbbell-row-bench-single, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "L ALL", image_flip: true, weight: 19.5kg}
 
   - step: { exercise_id: rest, duration_s: 50 }
 
