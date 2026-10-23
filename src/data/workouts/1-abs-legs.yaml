@@ -1,0 +1,32 @@
+name: Abs, back, legs
+description: "Required: KB"
+
+plan:
+  - include: warm-ups/warm-up.yaml
+  - step: { exercise_id: rest, duration_s: 20 }
+
+  - include: circuits/pams-ab-workout.yaml
+  
+  - step: { exercise_id: dog-upward, duration_s: 20 }
+  - step: { exercise_id: rest, duration_s: 10 }
+
+  - include: circuits/superman-back.yaml
+
+  - step: { exercise_id: rest, duration_s: 30 }
+
+  # legs
+  - 
+    - repeat: 3
+      rest_s: 20
+      steps: 
+        - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "R", weight: KB16kg}
+        - step: { exercise_id: squat-bulgarian, reps: { prep_s: 10, reps_num: 8, rep_duration_s: 4 }, label: "L", weight: KB16kg, image_flip: true}
+
+  - step: { exercise_id: rest, duration_s: 30 }
+
+  # --- Cooldown ---
+  - step: { exercise_id: knee-roll, duration_s: 30 }
+  - step: { exercise_id: spinal-twist, label: L, duration_s: 30 }
+  - step: { exercise_id: spinal-twist, label: R, image_flip: true, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: L, duration_s: 30 }
+  - step: { exercise_id: stretch-figure-4, label: R, image_flip: true, duration_s: 30 }
