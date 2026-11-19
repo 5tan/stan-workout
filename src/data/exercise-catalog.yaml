@@ -377,12 +377,18 @@
         - id: dumbbell-lateral-rises
           display_name: Dumbbell lateral rises
           image: dumbbell_lateral_rises.gif
+        - id: dumbbell-lateral-rises-one-arm
+          display_name: Dumbbell lateral rises (one arm)
+          image: dumbbell_lateral_rises_one_arm.gif
         - id: dumbbell-front-to-lateral-raise
           display_name: Dumbbell front to lateral raise
           image: dumbbell_front_to_lateral_raise.gif
         - id: dumbbell-upright-row
           display_name: Dumbbell upright row
           image: dumbbell_upright_row.gif
+        - id: dumbbell-row-one-leg-stand
+          display_name: Dumbbell row - one leg stand
+          image: dumbbell_row_one_leg_stand.gif
         - id: dumbbell-row-single-arm
           display_name: Dumbbell row - single arm
           image: dumbbell_row_single_arm.webp
@@ -555,6 +561,9 @@
         - id: kettlebell-sit-to-press-up
           display_name: Kettlebell sit to press up
           image: kettlebell_sit_to_press_up.gif
+        - id: kettlebell-clean-swing
+          display_name: Kettlebell clean swing
+          image: kettlebell_clean_swing.webp
     - name: Kneeling
       items:
         - id: kettlebell-halo

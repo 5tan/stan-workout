@@ -26,7 +26,7 @@ plan:
       duration_s: 20
   # --- Phase 3: Light cardio ---
   - step:
-      exercise_id: skaters
+      exercise_id: butt-kicks
       duration_s: 30
   - step:
       exercise_id: burpee-jumpy
